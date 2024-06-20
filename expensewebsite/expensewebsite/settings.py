@@ -14,6 +14,7 @@ import os
 import django_heroku
 from dotenv import load_dotenv
 from pathlib import Path
+import django.contrib.messages as messages
 
 load_dotenv()
 
@@ -133,7 +134,7 @@ STATIC_ROOT = os.path.join(BASE_DIR,'static')
 django_heroku.settings(locals())
 
 MESSAGE_TAGS = {
-    messages.ERROR: 'danger'
+    messages.ERROR: 'danger',
 }
 
 EMAIL_HOST = os.environ.get('EMAIL_HOST')

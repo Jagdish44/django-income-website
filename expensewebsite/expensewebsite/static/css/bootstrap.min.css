@@ -245,7 +245,16 @@
  button,
  [type="button"],
  [type="reset"],
- [type="submit"] 
+ [type="submit"] {
+    background-color: #007bff; /* Example background color */
+    color: #fff; /* Example text color */
+    border: 1px solid transparent;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    text-transform: uppercase;
+ }
  button:not(:disabled),
  [type="button"]:not(:disabled),
  [type="reset"]:not(:disabled),
@@ -268,8 +277,34 @@
  input[type="date"],
  input[type="time"],
  input[type="datetime-local"],
- input[type="month"] 
-
+ input[type="month"] {
+     /* Example styles */
+     border: 1px solid #ccc;
+     padding: 8px;
+     border-radius: 4px;
+     font-size: 14px;
+     line-height: 1.5;
+     box-sizing: border-box; /* Ensures padding is included in element's total width/height */
+     /* Additional styles as needed */
+ }
+ 
+ /* Example hover state */
+ input[type="date"]:hover,
+ input[type="time"]:hover,
+ input[type="datetime-local"]:hover,
+ input[type="month"]:hover {
+     border-color: #007bff; /* Example border color on hover */
+ }
+ 
+ /* Example focus state */
+ input[type="date"]:focus,
+ input[type="time"]:focus,
+ input[type="datetime-local"]:focus,
+ input[type="month"]:focus {
+     outline: none; /* Example remove default focus outline */
+     border-color: #007bff; /* Example border color on focus */
+     box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25); /* Example box shadow on focus */
+ }
  textarea {
    overflow: auto;
    resize: vertical;
@@ -298,12 +333,30 @@
  [type="number"]::-webkit-outer-spin-button {
    height: auto;
  }
- [type="search"] {
-   outline-offset: -2px;
- }
- [type="search"]::-webkit-search-decoration {
-   -webkit-appearance: none;
- }
+ input[type="search"] {
+    /* Remove default browser styling */
+    -webkit-appearance: none;
+    appearance: none;
+    
+    /* Example custom styles */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Example hover state */
+input[type="search"]:hover {
+    border-color: #007bff; /* Example border color on hover */
+}
+
+/* Example focus state */
+input[type="search"]:focus {
+    outline: none; /* Example remove default focus outline */
+    border-color: #007bff; /* Example border color on focus */
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25); /* Example box shadow on focus */
+}
  ::-webkit-file-upload-button {
    font: inherit;
    -webkit-appearance: button;
